@@ -1,0 +1,51 @@
+{
+  "name": "base64-image-preview",
+  "displayName": "Base64 Image Preview",
+  "description": "Convert base64 strings to images and preview them",
+  "version": "1.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/base64-image-preview"
+  },
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "base64-image-preview.showImage",
+        "title": "Show Image from Base64"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "base64-image-preview.showImage",
+          "group": "navigation",
+          "when": "editorHasSelection"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile",
+    "lint": "eslint src --ext ts"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.75.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  }
+}
+

@@ -3,7 +3,8 @@
   "displayName": "Base64 Image Preview",
   "description": "Convert base64 strings to images and preview them",
   "version": "1.0.1",
-  "publisher": "local",
+  "author": "Prem Prakash",
+  "publisher": "premprakash",
   "engines": {
     "vscode": "^1.75.0"
   },
